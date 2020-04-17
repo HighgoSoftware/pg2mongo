@@ -1,0 +1,30 @@
+version: '3.0'
+
+services:
+  mongo:
+    restart: always
+    image: "mongod:4.2.5"
+    ports:
+      - "27017"
+    volumes:
+      - ./data/mgdata:/data/db
+      - ./scripts/p2m.sh:/p2m.sh
+
+  pg1:
+    restart: always
+    image: "postgres:12.2"
+    ports:
+      - "5432"
+    volumes:
+      - ./data/pg1data:/var/lib/pgsql/12/data
+      - ./scripts/data_gen.sh:/data_gen.sh
+
+  pg2:
+    restart: always
+    image: "postgres:12.2"
+    ports:
+      - "5432"
+    volumes:
+      - ./data/pg2data:/var/lib/pgsql/12/data
+      - ./scripts/data_gen.sh:/data_gen.sh
+
