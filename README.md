@@ -9,7 +9,7 @@ Replicate multiple PostgreSQL servers to a single MongoDB server using docker co
 #### 1. clone repo
 git clone https://github.com/HighgoSoftware/pg2mongo.git
 
-#### 2. build images mongod:4.25 and postgres:12.2
+#### 2. build images mongod:4.25 and postgres:12.x
 ```
 cd pg2mongo
 ./build-images.sh
