@@ -2,6 +2,9 @@
 
 set -m
 
+# Exit code
+retval=0
+
 if [[ "$1" == "-h" ]]; then
 	echo "Usage:"
 	echo "  * Outside of the container:"
@@ -12,13 +15,13 @@ if [[ "$1" == "-h" ]]; then
 	exit 0
 fi
 
-source /var/lib/pgsql/.bashrc
-pgbench -i -p 5432 -d postgres
-status=$?
-if [ $status -ne 0 ]; then
-	echo "Failed to start pgbench on: $status"
+source /var/lib/highgo/.bashrc
+pgbench -i -p 5333 -d postgres -U highgo
+retval=$?
+if [ $retval -ne 0 ]; then
+	echo "Failed to start pgbench on: $retval"
 fi
 sleep 1;
 
-exit 0
+exit $retval
 

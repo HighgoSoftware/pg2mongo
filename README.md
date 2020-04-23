@@ -3,7 +3,7 @@ Replicate multiple PostgreSQL servers to a single MongoDB server using docker co
 
 #### Prerequisite
 * Install Docker by refer to https://docs.docker.com/get-docker/
-* (optional) psql (12.2) and mongo (4.2.5) need to be installed on local machine, if using them to connect containers from local mapping ports
+* (optional) psql (12.x) and mongo (4.2.5) need to be installed on local machine, if using them to connect containers from local mapping ports
 
 ### Setup with scripts
 #### 1. clone repo

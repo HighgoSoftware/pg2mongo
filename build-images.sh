@@ -1,13 +1,16 @@
 #!/bin/bash
+set -m
 
-set -e
+MYPATH=`pwd`
 
-BLD_PATH=`pwd`
+### build centos7 base docker images
+cd $MYPATH/centos7-base
+docker build -t centos7-base . -f Dockerfile
 
 ### build postgres docker images
-cd $BLD_PATH/postgres
-docker build -t postgres:12.2 . -f Dockerfile
+cd $MYPATH/postgres
+docker build -t postgres:12 . -f Dockerfile
 
 ### build mongod docker images
-cd $BLD_PATH/mongod
+cd $MYPATH/mongod
 docker build -t mongod:4.2.5 . -f Dockerfile
