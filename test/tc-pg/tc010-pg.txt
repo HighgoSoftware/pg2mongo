@@ -1,0 +1,4 @@
+drop table if exists tbl_tc010;
+CREATE TABLE tbl_tc010 (id serial primary key, a SMALLINT);
+INSERT INTO tbl_tc010 (a) VALUES(-32768);
+

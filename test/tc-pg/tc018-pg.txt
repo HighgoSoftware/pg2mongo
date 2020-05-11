@@ -1,0 +1,4 @@
+drop table if exists tbl_tc018;
+CREATE TABLE tbl_tc018 (id serial primary key, a NUMERIC);
+INSERT INTO tbl_tc018 (a) VALUES(-9876543210.0987654321);
+

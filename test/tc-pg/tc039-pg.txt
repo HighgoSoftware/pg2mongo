@@ -1,0 +1,3 @@
+drop table if exists tbl_tc039;
+CREATE TABLE tbl_tc039 (id serial primary key, a uuid[]);
+INSERT INTO tbl_tc039 (a) VALUES(ARRAY['40e6215d-b5c6-4896-987c-f30f3678f608'::uuid, '3f333df6-90a4-4fda-8dd3-9485d27cee36'::uuid]);

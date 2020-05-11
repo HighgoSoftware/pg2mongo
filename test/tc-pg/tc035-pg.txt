@@ -1,0 +1,3 @@
+drop table if exists tbl_tc035;
+CREATE TABLE tbl_tc035 (id serial primary key, a float4[]);
+INSERT INTO tbl_tc035 (a) VALUES(ARRAY['123.456'::float4, '2222.3333'::float4]);

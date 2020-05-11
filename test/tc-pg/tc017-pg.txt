@@ -1,0 +1,4 @@
+drop table if exists tbl_tc017;
+CREATE TABLE tbl_tc017 (id serial primary key, a DECIMAL);
+INSERT INTO tbl_tc017 (a) VALUES(-1234567890.1234567891);
+

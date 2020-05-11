@@ -1,0 +1,4 @@
+drop table if exists tbl_tc023;
+CREATE TABLE tbl_tc023 (id serial primary key, a point, b line, c lseg, d box, e path, f path, g polygon, h circle);
+INSERT INTO tbl_tc023 (a,b,c,d,e,f,g,h) VALUES('(1,1)'::point, '[(1,1),(2,2)]'::line, '[(3,3), (4,4)]'::lseg, '((1,1),(2,2))'::box, '[(1,1),(2,2),(3,3)]'::path, '((1,1),(2,2),(3,3))'::path, '((1,1),(2,2),(3,3),(4,4))'::polygon, '<(1,1),5>'::circle);
+

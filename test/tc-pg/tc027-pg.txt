@@ -1,0 +1,3 @@
+drop table if exists tbl_tc027;
+CREATE TABLE tbl_tc027 (id serial primary key, a bytea[]);
+INSERT INTO tbl_tc027 (a) VALUES(ARRAY['\xDEADBEEF'::bytea, '\xC001CAFE'::bytea]);

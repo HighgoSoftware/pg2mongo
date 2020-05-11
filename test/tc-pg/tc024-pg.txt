@@ -1,0 +1,3 @@
+drop table if exists tbl_tc024;
+CREATE TABLE tbl_tc024 (id serial primary key, a json, b jsonb, c jsonpath, d json[], e jsonb[]);
+INSERT INTO tbl_tc024 (a) VALUES( '{"customer": "John", "items":{"product":"beer","qty":20}}' );

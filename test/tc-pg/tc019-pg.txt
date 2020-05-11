@@ -1,0 +1,4 @@
+drop table if exists tbl_tc019;
+CREATE TABLE tbl_tc019 (id serial primary key, a UUID);
+INSERT INTO tbl_tc019 (a) VALUES('A0EEBC99-9C0B-4EF8-BB6D-6BB9BD380A11'::UUID);
+

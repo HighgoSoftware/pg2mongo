@@ -1,0 +1,4 @@
+drop table if exists tbl_tc014;
+CREATE TABLE tbl_tc014 (id serial primary key, a BIGINT);
+INSERT INTO tbl_tc014 (a) VALUES(-9223372036854775808);
+

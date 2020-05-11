@@ -1,0 +1,4 @@
+drop table if exists tbl_tc012;
+CREATE TABLE tbl_tc012 (id serial primary key, a SERIAL);
+INSERT INTO tbl_tc012 (a) VALUES(123456);
+

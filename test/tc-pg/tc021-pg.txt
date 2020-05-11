@@ -1,0 +1,4 @@
+drop table if exists tbl_tc021;
+CREATE TABLE tbl_tc021 (id serial primary key, a TIMESTAMPTZ);
+INSERT INTO tbl_tc021 (a) VALUES('2020-04-15 12:50:33-07'::timestamptz);
+

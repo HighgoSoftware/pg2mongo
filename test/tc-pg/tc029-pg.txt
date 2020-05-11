@@ -1,0 +1,3 @@
+drop table if exists tbl_tc029;
+CREATE TABLE tbl_tc029 (id serial primary key, a name[]);
+INSERT INTO tbl_tc029 (a) VALUES(ARRAY['teacher'::name, 'student'::name]);

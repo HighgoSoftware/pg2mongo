@@ -1,0 +1,3 @@
+drop table if exists tbl_tc033;
+CREATE TABLE tbl_tc033 (id serial primary key, a varchar[]);
+INSERT INTO tbl_tc033 (a) VALUES(ARRAY['ABCD'::varchar, '1234'::varchar]);

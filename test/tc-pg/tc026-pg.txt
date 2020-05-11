@@ -1,0 +1,3 @@
+drop table if exists tbl_tc026;
+CREATE TABLE tbl_tc026 (id serial primary key, a bool[]);
+INSERT INTO tbl_tc026 (a) VALUES(ARRAY[true, false]);

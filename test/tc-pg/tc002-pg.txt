@@ -1,0 +1,6 @@
+create table tbl_tc002a(id serial primary key, a text);
+insert into tbl_tc002a(a) values('test-a') ;
+select * from tbl_tc002a where a='test-a' ;
+create table tbl_tc002b(id serial primary key, b text);
+insert into tbl_tc002b(b) values('test-b') ;
+select * from tbl_tc002b where b='test-b' ;

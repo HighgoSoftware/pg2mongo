@@ -54,10 +54,17 @@ package_make_install()
 	PopD
 }
 
+install()
+{
+	echo "Starting install wal2mongo library"
+	wget https://github.com/HighgoSoftware/wal2mongo/files/4612251/wal2mongo_centos_7_binary.tar.gz
+	sudo tar xzvf wal2mongo_centos_7_binary.tar.gz -C /usr/local/highgo/hg-pgsql/12
+	retval=$?
+}
 
 build()
 {
-	echo "Starting build wal2mong process"
+	echo "Starting build wal2mongo"
 	checkout_sources
 	package_make
 	package_make_install
@@ -66,13 +73,14 @@ build()
 
 
 # main
-build
+##build
+install
 
 if [[ $retval -eq 0 ]];
 then
-	echo "Build wal2mongo completed successfully"
+	echo "Install wal2mongo completed successfully"
 else
-	echo "Build wal2mongo completed with error(s)."
+	echo "Install wal2mongo completed with error(s)."
 fi
 
 exit $retval

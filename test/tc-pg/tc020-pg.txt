@@ -1,0 +1,4 @@
+drop table if exists tbl_tc020;
+CREATE TABLE tbl_tc020 (id serial primary key, a BYTEA);
+INSERT INTO tbl_tc020 (a) VALUES('abc \153\154\155 \052\251\124'::bytea);
+

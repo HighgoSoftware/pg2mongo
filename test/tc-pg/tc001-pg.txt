@@ -1,0 +1,2 @@
+create table tbl_tc001(id serial primary key, a text);
+insert into tbl_tc001(a) values('test');

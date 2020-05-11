@@ -1,0 +1,4 @@
+drop table if exists tbl_tc016;
+CREATE TABLE tbl_tc016 (id serial primary key, a DOUBLE PRECISION);
+INSERT INTO tbl_tc016 (a) VALUES(-1.123456789123456);
+

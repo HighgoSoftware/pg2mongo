@@ -1,0 +1,4 @@
+drop table if exists tbl_tc025;
+CREATE TABLE tbl_tc025 (id serial primary key, a xml);
+INSERT INTO tbl_tc025 (a) VALUES('<dept xmlns:smpl="http://example.com" smpl:did="DPT011-IT"><name>IT</name><persons><person smpl:pid="111"><name>John Smith</name><age>24</age></person><person smpl:pid="112"><name>Michael Black</name><age>28</age></person></persons></dept>'::xml);
+

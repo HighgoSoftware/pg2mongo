@@ -1,0 +1,4 @@
+drop table if exists tbl_tc009;
+CREATE TABLE tbl_tc009 (id serial primary key, a BOOLEAN);
+INSERT INTO tbl_tc009 (a) VALUES(true);
+

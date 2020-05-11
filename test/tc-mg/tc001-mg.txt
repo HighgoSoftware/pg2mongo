@@ -1,0 +1,6 @@
+use mycluster_postgres_pg2mongo_pg1_1_postgres_w2m_slot1;
+db.tbl_tc001.find();
+db.dropDatabase();
+use mycluster_postgres_pg2mongo_pg2_1_postgres_w2m_slot1;
+db.tbl_tc001.find();
+db.dropDatabase();

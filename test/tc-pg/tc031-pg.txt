@@ -1,0 +1,3 @@
+drop table if exists tbl_tc031;
+CREATE TABLE tbl_tc031 (id serial primary key, a int4[]);
+INSERT INTO tbl_tc031 (a) VALUES(ARRAY['123456789'::int4,'987654321'::int4]);

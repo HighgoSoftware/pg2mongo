@@ -1,0 +1,5 @@
+drop table if exists tbl_tc007;
+create table tbl_tc007(id serial primary key, a int);
+insert into tbl_tc007(a) select i from generate_series(1, 9876) as i;
+update tbl_tc007 set a=a+10000 where a < 5433;
+

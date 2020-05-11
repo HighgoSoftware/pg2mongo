@@ -1,0 +1,2 @@
+use mycluster_postgres_pg2mongo_pg1_1_postgres_w2m_slot1;
+db.tbl_tc009.find( {"a" : { $type : "bool" } } );

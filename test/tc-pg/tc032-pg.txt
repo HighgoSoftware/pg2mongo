@@ -1,0 +1,3 @@
+drop table if exists tbl_tc032;
+CREATE TABLE tbl_tc032 (id serial primary key, a text[]);
+INSERT INTO tbl_tc032 (a) VALUES(ARRAY['abc'::text, '123'::text]);
