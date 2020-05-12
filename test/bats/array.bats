@@ -31,18 +31,6 @@ load assertions.bash
   assert_match "a.*true"
 }
 
-@test "$test_label ARRAY BYTEA replication test" {
-  # change data
-  run docker exec -it pg2mongo_pg1_1 bash /psql.sh tc027-pg.txt
-  assert_success
-  
-  # check replication results
-  sleep 3;
-  run docker exec -it pg2mongo_mongo_1 bash /mongo.sh tc027-mg.txt
-  assert_success
-  assert_match "a.*[HexData(0,\"deadbeef\")"
-}
-
 @test "$test_label ARRAY CHAR replication test" {
   # change data
   run docker exec -it pg2mongo_pg1_1 bash /psql.sh tc028-pg.txt
