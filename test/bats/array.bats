@@ -32,7 +32,6 @@ load assertions.bash
 }
 
 @test "$test_label ARRAY BYTEA replication test" {
-skip
   # change data
   run docker exec -it pg2mongo_pg1_1 bash /psql.sh tc027-pg.txt
   assert_success

@@ -19,7 +19,6 @@ load assertions.bash
 }
 
 @test "$test_label INSERT replication test" {
-skip
   # change data
   run docker exec -it pg2mongo_pg1_1 bash /psql.sh tc006-pg.txt
   assert_success
@@ -32,7 +31,6 @@ skip
 }
 
 @test "$test_label UPDATE replication test" {
-skip
   # change data
   run docker exec -it pg2mongo_pg1_1 bash /psql.sh tc007-pg.txt
   assert_success
@@ -45,7 +43,6 @@ skip
 }
 
 @test "$test_label DELETE replication test" {
-skip
   run docker exec -it pg2mongo_pg1_1 bash /psql.sh tc008-pg.txt
   assert_success
 
