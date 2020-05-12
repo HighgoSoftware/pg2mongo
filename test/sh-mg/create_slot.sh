@@ -16,9 +16,9 @@ do
 	mkfifo /tmp/pipe-$1-$2-${i}
 	sleep 1;
 
-	pg_recvlogical -h $1 -d $2 -U postgres --slot $1_$2_w2m_slot${i} --create-slot --plugin=wal2mongo
+	pg_recvlogical -h $1 -d $2 -U highgo --slot $1_$2_w2m_slot${i} --create-slot --plugin=wal2mongo
 	sleep 1;
-	pg_recvlogical -h $1 -d $2 -U postgres --slot $1_$2_w2m_slot${i} --start -f /tmp/pipe-$1-$2-${i} &
+	pg_recvlogical -h $1 -d $2 -U highgo --slot $1_$2_w2m_slot${i} --start -f /tmp/pipe-$1-$2-${i} &
 	status=$?
 	if [ $status -ne 0 ]; then
 		echo "Failed to start pg_recvlogical: $status"

@@ -72,7 +72,8 @@ load assertions.bash
 
   # check the replication results
   sleep 3;
-  run docker exec -it pg2mongo_mongo_1 bash /mongo.sh tc003-mg.txt teardown
+  run docker exec -it pg2mongo_mongo_1 bash /mongo.sh tc003-mg.txt
+  #run docker exec -it pg2mongo_mongo_1 bash /mongo.sh tc003-mg.txt teardown
   assert_success
   assert_match "switched to db mycluster_postgres_pg2mongo_pg1_1_postgres_w2m_slot1"
   assert_match "a.*test-a"
@@ -100,7 +101,8 @@ load assertions.bash
 
   # check the replication results
   sleep 3;
-  run docker exec -it pg2mongo_mongo_1 bash /mongo.sh tc004-mg.txt teardown
+  run docker exec -it pg2mongo_mongo_1 bash /mongo.sh tc004-mg.txt
+  #run docker exec -it pg2mongo_mongo_1 bash /mongo.sh tc004-mg.txt teardown
   assert_success
   assert_match "switched to db mycluster_db1_pg2mongo_pg1_1_db1_w2m_slot1"
   assert_match "a.*test"
@@ -136,7 +138,8 @@ load assertions.bash
  
   # check the replication results
   sleep 3;
-  run docker exec -it pg2mongo_mongo_1 bash /mongo.sh tc005-mg.txt teardown
+  run docker exec -it pg2mongo_mongo_1 bash /mongo.sh tc005-mg.txt
+  #run docker exec -it pg2mongo_mongo_1 bash /mongo.sh tc005-mg.txt teardown
   assert_success
   assert_match "switched to db mycluster_db1_pg2mongo_pg1_1_db1_w2m_slot1"
   assert_match "a.*test"
