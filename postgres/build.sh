@@ -57,8 +57,8 @@ package_make_install()
 install()
 {
 	echo "Starting install wal2mongo library"
-	wget https://github.com/HighgoSoftware/wal2mongo/files/4612251/wal2mongo_centos_7_binary.tar.gz
-	sudo tar xzvf wal2mongo_centos_7_binary.tar.gz -C /usr/local/highgo/hg-pgsql/12
+	wget https://github.com/HighgoSoftware/wal2mongo/files/4612251/wal2mongo_centos_7_binary.tar.gz -P /var/lib/highgo/
+	sudo tar xzvf /var/lib/highgo/wal2mongo_centos_7_binary.tar.gz -C /usr/local/highgo/hg-pgsql/12
 	retval=$?
 }
 
